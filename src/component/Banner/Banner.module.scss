@@ -1,0 +1,31 @@
+@use "@style/_mixin.module.scss" as mixin;
+@use "@style/_variable.module.scss" as variable;
+
+.container {
+  @include mixin.flex_box_custom(center, center, 0px);
+
+  background-image: url("@image/BannerEcommerce.jpeg");
+  min-height: 750px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.content {
+  @include mixin.flex_box_custom(center, center, 10px);
+
+  flex-direction: column;
+}
+
+.title {
+  font-size: 42px;
+  color: variable.$fourth_color;
+  font-weight: 400;
+  margin: 16px 0px;
+}
+
+.description {
+  color: variable.$third_color;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
