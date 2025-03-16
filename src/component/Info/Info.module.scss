@@ -1,0 +1,9 @@
+@use "@style/_variable.module.scss" as variable;
+@use "@style/_mixin.module.scss" as mixin;
+
+.container {
+  @include mixin.flex_box_custom(space-between, center, 0px 50px);
+  background-color: variable.$primary_color;
+  margin-top: -75px;
+  padding: 20px 50px;
+}

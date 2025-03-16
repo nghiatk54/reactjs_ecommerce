@@ -1,0 +1,24 @@
+@use "@style/_mixin.module.scss" as mixin;
+@use "@style/_variable.module.scss" as variable;
+
+.containerCard {
+    @include mixin.flex_box_custom(center, center, 18px);
+    width: 280px;
+    height: 104px;
+}
+
+.containerContent {
+    @include mixin.flex_box_custom(center, flex-start, 10px);
+    flex-direction: column;
+    color: variable.$white_color;
+    font-weight: 300;
+
+    .title {
+        font-size: 17px;
+    }
+
+    .description {
+        font-size: 16px;
+        color: #FFFFFFC7;
+    }
+}
