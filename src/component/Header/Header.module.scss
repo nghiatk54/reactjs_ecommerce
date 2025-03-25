@@ -23,6 +23,11 @@
 
 .containerBoxIcon {
   @include mixin.flex_box_custom(center, center, 10px);
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .containerMenu {
@@ -35,6 +40,12 @@
   background-color: variable.$primary_color; 
   width: 26px;
   height: 26px;
+
+  .icon {
+    width: 15px;
+    height: 15px;
+    fill: variable.$white_color;
+  }
 }
 
 .menu {

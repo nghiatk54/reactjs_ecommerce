@@ -3,9 +3,9 @@ import { dataBoxIcon, dataMenu } from "./constant";
 import styles from "./Header.module.scss";
 import Menu from "./Menu/Menu";
 import Logo from "@icon/image/Logo-retina.png";
-import reloadIcon from "@icon/svg/reloadIcon.svg";
-import heartIcon from "@icon/svg/heartIcon.svg";
-import cartIcon from "@icon/svg/cartIcon.svg";
+import ReloadIcon from "@icon/svg/reloadIcon.svg";
+import HeartIcon from "@icon/svg/heartIcon.svg";
+import CartIcon from "@icon/svg/cartIcon.svg";
 function Header() {
   const {
     containerBoxIcon,
@@ -13,6 +13,7 @@ function Header() {
     containerHeader,
     containerBox,
     container,
+    icon,
   } = styles;
   return (
     <div className={container}>
@@ -43,9 +44,9 @@ function Header() {
             ))}
           </div>
           <div className={containerBoxIcon}>
-            <img width={24} height={24} src={reloadIcon} alt="reload" />
-            <img width={24} height={24} src={heartIcon} alt="heart" />
-            <img width={24} height={24} src={cartIcon} alt="cart" />
+            <ReloadIcon className={icon} />
+            <HeartIcon className={icon} />
+            <CartIcon className={icon} />
           </div>
         </div>
       </div>

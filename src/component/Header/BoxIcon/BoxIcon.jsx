@@ -1,20 +1,16 @@
 import styles from "../Header.module.scss";
-import fbIcon from "@icon/svg/fbIcon.svg";
-import insIcon from "@icon/svg/insIcon.svg";
-import ytbIcon from "@icon/svg/ytbIcon.svg";
+import FbIcon from "@icon/svg/fbIcon.svg";
+import InsIcon from "@icon/svg/insIcon.svg";
+import YtbIcon from "@icon/svg/ytbIcon.svg";
 
 function BoxIcon({ type, href }) {
-  const { boxIcon } = styles;
-  const icon = {
-    fb: fbIcon,
-    ins: insIcon,
-    ytb: ytbIcon,
+  const { boxIcon, icon } = styles;
+  const iconObject = {
+    fb: <FbIcon className={icon} />,
+    ins: <InsIcon className={icon} />,
+    ytb: <YtbIcon className={icon} />,
   };
-  return (
-    <div className={boxIcon}>
-      <img src={icon[type]} alt={type} />
-    </div>
-  );
+  return <div className={boxIcon}>{iconObject[type]}</div>;
 }
 
 export default BoxIcon;

@@ -6,7 +6,9 @@
       "@style/*": ["src/assets/style/*"],
       "@icon/*": ["src/assets/icon/*"],
       "@assets/*": ["src/assets/*"],
-      "@image/*": ["src/assets/image/*"]
+      "@image/*": ["src/assets/image/*"],
+      "@api/*": ["src/api/*"],
+      "@hook/*": ["src/hook/*"]
     }
   },
   "include": ["src/**/*"]

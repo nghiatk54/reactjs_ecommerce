@@ -1,0 +1,25 @@
+@use "@style/_mixin.module.scss" as mixin;
+@use "@style/_variable.module.scss" as variable;
+.container {
+    @include mixin.flex_box_custom(center, center, 0px);
+    flex-direction: column;
+    background-image: url("@image/HeadlingListProduct.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 409px;
+    width: calc(100% / 2);
+}
+
+.containerTimer {
+    @include mixin.flex_box_custom(center, center, 10px);
+}
+
+.title {
+    font-size: 28px;
+    color: variable.$fourth_color;
+    margin-bottom: 4px;
+}
+
+.boxBtn {
+    margin-top: 16px;
+}
