@@ -8,7 +8,9 @@
       "@assets/*": ["src/assets/*"],
       "@image/*": ["src/assets/image/*"],
       "@api/*": ["src/api/*"],
-      "@hook/*": ["src/hook/*"]
+      "@hook/*": ["src/hook/*"],
+      "@page/*": ["src/page/*"],
+      "@route/*": ["src/route/*"]
     }
   },
   "include": ["src/**/*"]

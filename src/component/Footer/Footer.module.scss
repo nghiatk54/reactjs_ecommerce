@@ -1,0 +1,35 @@
+@use "@style/_variable.module.scss" as variable;
+@use "@style/_mixin.module.scss" as mixin;
+
+.container {
+    @include mixin.flex_box_custom(center, center, 30px);
+    flex-direction: column;
+    background-color: variable.$third_color;
+    margin-top: 80px;
+    color: variable.$white_color;
+    padding: 50px 0;
+
+    .boxNav {
+        @include mixin.flex_box_custom(center, center, 50px);
+
+        .boxNavItem {
+            font-size: 15px;
+            color: variable.$white_color;
+            text-decoration: none;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+    }
+
+    .boxGuarantee {
+        @include mixin.flex_box_custom(center, center, 14px);
+        flex-direction: column;
+    }
+
+    .copyRight {
+        @include mixin.flex_box_custom(center, center, 0px);
+    }
+}

@@ -7,11 +7,11 @@ import HeadlingListProduct from "@component/HeadlingListProduct/HeadlingListProd
 import { getProducts } from "@api/productService";
 import PopularProduct from "@component/PopularProduct/PopularProduct";
 import SaleHomepage from "@component/SaleHomepage/SaleHomepage";
+import Footer from "@component/Footer/Footer";
 function HomePage() {
   const [listProduct, setListProduct] = useState([]);
   useEffect(() => {
     getProducts().then((res) => {
-      console.log(res.contents);
       setListProduct(res.contents);
     });
   }, []);
@@ -24,7 +24,7 @@ function HomePage() {
       <HeadlingListProduct data={listProduct.slice(0, 2)} />
       <PopularProduct data={listProduct.slice(2, 10)} />
       <SaleHomepage />
-      <div style={{ height: "200px" }}></div>
+      <Footer />
     </>
   );
 }

@@ -1,11 +1,8 @@
-import HomePage from "@component/HomePage/HomePage";
-
+import RouteApp from "@route/index";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 function App() {
-  return (
-    <>
-      <HomePage />
-    </>
-  );
+  const router = createBrowserRouter(RouteApp);
+  return <RouterProvider router={router} />;
 }
 
 export default App;
