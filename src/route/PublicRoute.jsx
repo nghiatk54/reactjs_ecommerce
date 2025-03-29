@@ -2,7 +2,8 @@ import HomePage from "@page/HomePage/HomePage";
 
 const PublicRoute = [
   {
-    path: "/public",
+    path: "/",
+    element: <HomePage />,
     children: [
       {
         path: "/home",

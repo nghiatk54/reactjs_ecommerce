@@ -1,22 +1,9 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
+import useScrollHeadling from "@hook/useScrollHeadling";
 
 function useTranslateX() {
-  const [scrollDirection, setScrollDirection] = useState(null);
-  const previousScrollPosition = useRef(0);
+  const { scrollDirection, scrollPosition } = useScrollHeadling();
   const [translateXPosition, setTranslateXPosition] = useState(40);
-  const [scrollPosition, setScrollPosition] = useState(0);
-
-  const scrollTracking = () => {
-    const currentScrollPosition = window.scrollY;
-    if (currentScrollPosition > previousScrollPosition.current) {
-      setScrollDirection("down");
-    } else {
-      setScrollDirection("up");
-    }
-    previousScrollPosition.current =
-      currentScrollPosition <= 0 ? 0 : currentScrollPosition;
-    setScrollPosition(currentScrollPosition);
-  };
 
   const handleTranslateX = () => {
     if (scrollDirection === "down" && scrollPosition >= 1500) {
@@ -29,13 +16,6 @@ function useTranslateX() {
       );
     }
   };
-
-  useEffect(() => {
-    window.addEventListener("scroll", scrollTracking);
-    return () => {
-      window.removeEventListener("scroll", scrollTracking);
-    };
-  }, []);
 
   useEffect(() => {
     handleTranslateX();

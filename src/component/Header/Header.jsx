@@ -6,6 +6,9 @@ import Logo from "@icon/image/Logo-retina.png";
 import ReloadIcon from "@icon/svg/reloadIcon.svg";
 import HeartIcon from "@icon/svg/heartIcon.svg";
 import CartIcon from "@icon/svg/cartIcon.svg";
+import useScrollHeadling from "@hook/useScrollHeadling";
+import { useState, useEffect } from "react";
+import classNames from "classnames";
 function Header() {
   const {
     containerBoxIcon,
@@ -14,9 +17,21 @@ function Header() {
     containerBox,
     container,
     icon,
+    topHeader,
+    fixedHeader,
   } = styles;
+  const { scrollPosition } = useScrollHeadling();
+  const [isSticky, setIsSticky] = useState(false);
+  useEffect(() => {
+    setIsSticky(scrollPosition > 80);
+  }, [scrollPosition]);
   return (
-    <div className={container}>
+    <div
+      className={classNames(container, {
+        [topHeader]: !isSticky,
+        [fixedHeader]: isSticky,
+      })}
+    >
       <div className={containerHeader}>
         <div className={containerBox}>
           <div className={containerBoxIcon}>
