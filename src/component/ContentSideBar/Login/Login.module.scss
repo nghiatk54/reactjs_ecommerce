@@ -1,0 +1,32 @@
+@use "@style/_variable.module.scss" as variable;
+
+.container {
+    padding: 30px 20px;
+    color: variable.$third_color;
+
+    .title {
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    .boxRemember {
+        margin-bottom: 30px;
+
+        input {
+            margin-right: 14px;
+        }
+        span {
+            font-size: 14px;
+        }
+    }
+
+    .lostPassword {
+        margin-top: 24px;
+        font-size: 14px;
+        text-align: center;
+        font-weight: 300;
+        cursor: pointer;
+    }
+}

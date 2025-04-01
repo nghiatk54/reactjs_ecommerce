@@ -1,0 +1,35 @@
+@use "@style/_variable.module.scss" as variable;
+@use "@style/_mixin.module.scss" as mixin;
+
+.container {
+  @include mixin.flex_box_custom(space-between, unset, 0px);
+  flex-direction: column;
+  height: 100vh;
+  padding: 30px 20px;
+
+  .boxFooter {
+    @include mixin.flex_box_custom(space-between, unset, 20px);
+    flex-direction: column;
+
+    .boxSubtotal {
+      @include mixin.flex_box_custom(space-between, center, 0px);
+
+      .subtotal {
+        font-size: 14px;
+        font-weight: 300;
+        color: variable.$third_color;
+      }
+
+      .price {
+        font-size: 16px;
+        font-weight: 300;
+        color: variable.$third_color;
+      }
+    }
+
+    .boxButton {
+      @include mixin.flex_box_custom(space-between, unset, 10px);
+      flex-direction: column;
+    }
+  }
+}

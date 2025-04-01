@@ -1,0 +1,38 @@
+@use "@style/_variable.module.scss" as variable;
+@use "@style/_mixin.module.scss" as mixin;
+
+.container {
+    margin-bottom: 20px;
+    
+    .labelInput {
+        font-size: 14px;
+        font-weight: 300;
+        color: variable.$third_color;
+        margin-bottom: 6px;
+    }
+    .boxInput {
+        position: relative;
+        width: 100%;
+        input { 
+            width: 100%;
+            border: 1px solid variable.$gray_color;
+            outline: none;
+            padding: 10px 0px 10px 10px;
+
+            &:focus {
+                border: 1px solid variable.$primary_color;
+            }
+        }
+        .inputPassword {
+            padding-right: 30px;
+        }
+        .boxIcon {
+            @include mixin.flex_box_custom(center, center);
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+    }
+}

@@ -4,6 +4,10 @@ body {
     font-family: "Roboto Mono", monospace;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 p {
     margin: 0;
 }

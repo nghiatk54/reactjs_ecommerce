@@ -1,5 +1,7 @@
 import RouteApp from "@route/route";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { SideBarProvider } from "@context/SideBarProvider";
+import SideBar from "@component/SideBar/SideBar";
 function App() {
   const router = createBrowserRouter(RouteApp, {
     future: {
@@ -7,7 +9,10 @@ function App() {
     },
   });
   return (
-    <RouterProvider router={router} fallbackElement={<div>Loading...</div>} />
+    <SideBarProvider>
+      <SideBar />
+      <RouterProvider router={router} fallbackElement={<div>Loading...</div>} />
+    </SideBarProvider>
   );
 }
 

@@ -10,7 +10,8 @@
       "@api/*": ["src/api/*"],
       "@hook/*": ["src/hook/*"],
       "@page/*": ["src/page/*"],
-      "@route/*": ["src/route/*"]
+      "@route/*": ["src/route/*"],
+      "@context/*": ["src/context/*"]
     }
   },
   "include": ["src/**/*"]
