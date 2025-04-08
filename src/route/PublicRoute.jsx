@@ -1,4 +1,6 @@
-import HomePage from "@page/HomePage/HomePage";
+import { lazy } from "react";
+
+const HomePage = lazy(() => import("@page/HomePage/HomePage"));
 
 const PublicRoute = [
   {

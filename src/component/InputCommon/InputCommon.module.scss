@@ -35,4 +35,24 @@
             cursor: pointer;
         }
     }
+    .errorMessage {
+        font-size: 12px;
+        color: variable.$error_color;
+        margin-top: 4px;
+    }
+}
+
+.errorContainer {
+    .labelInput {
+        color: variable.$error_color;
+    }
+    .boxInput {
+        input {
+            border: 1px solid variable.$error_color;
+
+            &:focus {
+                border: 1px solid variable.$error_color;
+            }
+        }
+    }
 }

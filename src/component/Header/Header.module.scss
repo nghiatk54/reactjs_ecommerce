@@ -64,6 +64,16 @@
 .menu {
   cursor: pointer;
   padding-top: 8px;
+  position: relative;
+
+  .subMenu {
+    position: absolute;
+    width: 100%;
+    background-color: variable.$white_color;
+    padding: 10px;
+    top: 40px;
+    cursor: pointer;
+  }
 }
 
 .menu::after {

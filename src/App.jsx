@@ -1,6 +1,8 @@
 import RouteApp from "@route/route";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { SideBarProvider } from "@context/SideBarProvider";
+import { ToastProvider } from "@context/ToastProvider";
+import { StoreProvider } from "@context/StoreProdiver";
 import SideBar from "@component/SideBar/SideBar";
 function App() {
   const router = createBrowserRouter(RouteApp, {
@@ -9,10 +11,17 @@ function App() {
     },
   });
   return (
-    <SideBarProvider>
-      <SideBar />
-      <RouterProvider router={router} fallbackElement={<div>Loading...</div>} />
-    </SideBarProvider>
+    <StoreProvider>
+      <ToastProvider>
+        <SideBarProvider>
+          <SideBar />
+          <RouterProvider
+            router={router}
+            fallbackElement={<div>Loading...</div>}
+          />
+        </SideBarProvider>
+      </ToastProvider>
+    </StoreProvider>
   );
 }
 
